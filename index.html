@@ -126,7 +126,24 @@
 	</form>
 
 	<script>
+
+		var timer = 60;
+
+		var interval = setInterval(decrement, 1000);
+
+		function decrement() { //why if I put alert in if statement it triggers when timer on the page shows 1? (add holly crap alert) why does it take a second to go to 59 sec?
+			timer--;
+			$("#timer").html("<div> Time remaining: " + timer + "</div>");
+
+			
+			if (timer === 0) {
+			clearInterval(interval);
+			}
+		}
+
 		
+
+
 
 
 	</script>
