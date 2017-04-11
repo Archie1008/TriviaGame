@@ -174,6 +174,20 @@
 		
 		// var correctAnswer = document.getElementsByName("something")[0].value;
 
+		var aCa = 0; // all correct answers;
+		var wrongAnswer = 0;
+		var cA1 = 0;//vars that collect points for the right answers
+		var cA2 = 0;
+		var cA3 = 0;
+		var cA4 = 0;
+		var cA5 = 0;
+		var cA6 = 0;
+		var cA7 = 0;
+		var cA8 = 0;
+		var cA9 = 0;
+		var cA10 = 0;
+
+
 		var correctAnswer = document.querySelector("form#f1 input[value=male]").value;
 
 		$("#f1 input").on("change", function() {
@@ -181,19 +195,154 @@
    			console.log(clicked);
    			
    			if (clicked === correctAnswer) {
+   				cA1 = 1;
+   				aCa = cA1 + cA2 + cA3 + cA4 + cA5 + cA6 + cA7 + cA8 + cA9 + cA10 ;
+   				alert(aCa);
+   			}
+
+   			else {
+   				cA1 = 0;
+   				aCa = cA1 + cA2 + cA3 + cA4 + cA5 + cA6 + cA7 + cA8 + cA9 + cA10 ;
+   				alert(aCa);  			}
+   		});
+
+   		$("#f2 input").on("change", function() {
+			var	clicked = $("input[name=something]:checked", "#f2").val();
+   			console.log(clicked);
+   			
+   			if (clicked === correctAnswer) {
    				alert("shit works!!!");
+   				cA2 = 1;
    			}
 
    			else {
    				alert("yahoo!");
+   				cA2 = 0;
    			}
+   		});
+
+   		$("#f3 input").on("change", function() {
+			var	clicked = $("input[name=something]:checked", "#f3").val();
+   			console.log(clicked);
    			
-		});
+   			if (clicked === correctAnswer) {
+   				alert("shit works!!!");
+   				cA3 = 1;
+   			}
+
+   			else {
+   				alert("yahoo!");
+   				cA3 = 0;
+   			}
+   		});
+   			
+
+   		$("#f4 input").on("change", function() {
+			var	clicked = $("input[name=something]:checked", "#f4").val();
+   			console.log(clicked);
+   			
+   			if (clicked === correctAnswer) {
+   				alert("shit works!!!");
+   				cA4 = 1;
+   			}
+
+   			else {
+   				alert("yahoo!");
+   				cA4 = 0;
+   			}
+   		});
+
+   		$("#f5 input").on("change", function() {
+			var	clicked = $("input[name=something]:checked", "#f5").val();
+   			console.log(clicked);
+   			
+   			if (clicked === correctAnswer) {
+   				alert("shit works!!!");
+   				cA5 = 1;
+   			}
+
+   			else {
+   				alert("yahoo!");
+   				cA5 = 0;
+   			}
+   		});
+
+   		$("#f6 input").on("change", function() {
+			var	clicked = $("input[name=something]:checked", "#f6").val();
+   			console.log(clicked);
+   			
+   			if (clicked === correctAnswer) {
+   				alert("shit works!!!");
+   				cA6 = 1;
+   			}
+
+   			else {
+   				alert("yahoo!");
+   				cA6 = 0;
+   			}
+   		});
+
+   		$("#f7 input").on("change", function() {
+			var	clicked = $("input[name=something]:checked", "#f7").val();
+   			console.log(clicked);
+   			
+   			if (clicked === correctAnswer) {
+   				alert("shit works!!!");
+   				cA7 = 1;
+   			}
+
+   			else {
+   				alert("yahoo!");
+   				cA7 = 0;
+   			}
+   		});
+
+   		$("#f8 input").on("change", function() {
+			var	clicked = $("input[name=something]:checked", "#f8").val();
+   			console.log(clicked);
+   			
+   			if (clicked === correctAnswer) {
+   				alert("shit works!!!");
+   				cA8 = 1;
+   			}
+
+   			else {
+   				alert("yahoo!");
+   				cA8 = 0;
+   			}
+   		});
+
+   		$("#f9 input").on("change", function() {
+			var	clicked = $("input[name=something]:checked", "#f9").val();
+   			console.log(clicked);
+   			
+   			if (clicked === correctAnswer) {
+   				alert("shit works!!!");
+   				cA9 = 1;
+   			}
+
+   			else {
+   				alert("yahoo!");
+   				cA9 = 0;
+   			}
+   		});
+
+   		$("#f10 input").on("change", function() {
+			var	clicked = $("input[name=something]:checked", "#f10").val();
+   			console.log(clicked);
+   			
+   			if (clicked === correctAnswer) {
+   				alert("shit works!!!");
+   				cA10 = 1;
+   			}
+
+   			else {
+   				alert("yahoo!");
+   				cA10 = 0;
+   			}
+   		});
 
 		
-
-
-
 
 	</script>
 
