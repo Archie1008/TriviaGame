@@ -14,6 +14,8 @@
 	<br>
 	
 	<div id="timer">Time remaining: </div>
+
+	<div id="result">Test</div>
 	
 	<br>
 
@@ -23,7 +25,7 @@
 		<input type="radio" name="something" value="male"> Green<br>
 		<input type="radio" name="something" value="female"> Blue<br>
 		<input type="radio" name="something" value="other"> Red<br>
-		<input type="radio" name="something" value="other"> Yellow<br>
+		<input type="radio" name="something" value="other1"> Yellow<br>
 	</form>
 	
 	<br>
@@ -129,6 +131,9 @@
 
 		var timer = 60;
 
+		var rightAnswer = 0;
+		var wrongAnswer = 0;
+
 		var interval = setInterval(decrement, 1000);
 
 		function decrement() { //why if I put alert in if statement it triggers when timer on the page shows 1? (add holly crap alert) why does it take a second to go to 59 sec?
@@ -140,6 +145,50 @@
 			clearInterval(interval);
 			}
 		}
+//==========================================================================
+		// Is there anyway to operate with input ,that has the same value that inputs from other forms, within specific form without giving this input an additional attribute 
+		
+		// var x = document.getElementById("f1").getElementsByTagName("input")[0];
+
+		// x.onclick = function() {
+		// 	rightAnswer = 1;
+		// }
+
+			// // 
+//================================================================
+			// var x = document.getElementsByName("something")[0];
+
+			// x.onclick = function() {
+				
+			// 	document.getElementById("result").innerHTML = x.value;
+			// 	if (x.value === "male") {
+			// 	alert("gosh!");
+			// 	}
+
+			// }
+//================================================================
+			
+		// var radios = document.querySelectorAll('input[type="radio"]:checked');
+
+		// var x = $("input[name=something]:checked", "#f1").val() ;
+		
+		// var correctAnswer = document.getElementsByName("something")[0].value;
+
+		var correctAnswer = document.querySelector("form#f1 input[value=male]").value;
+
+		$("#f1 input").on("change", function() {
+			var	clicked = $("input[name=something]:checked", "#f1").val();
+   			console.log(clicked);
+   			
+   			if (clicked === correctAnswer) {
+   				alert("shit works!!!");
+   			}
+
+   			else {
+   				alert("yahoo!");
+   			}
+   			
+		});
 
 		
 
